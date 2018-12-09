@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <!--Excluding bootstrap-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+      <script type = "text/javascript"
+      src = "https://code.jquery.com/jquery-2.1.1.min.js"></script>
+      <link rel="stylesheet" type="text/css" href="index.css">
+     
+      <style>
+      #content,
+      #authorize-button,
+      #signout-button {
+      display: none
+      }
+      </style>
+     
+      <title>TrendTube</title>
+      <script>
+      $(document).ready(function(){
+      $('select').formSelect();
+      });
+      </script>
+    </head>
+    <body>
+      <!--Navigational Bar!-->
+      <nav class="black">
+        <div class="nav-wrapper">
+          <div class="container">
+            <a href="#!" class="brand-logo"><i class="material-icons">
+              video_library
+            </i>TrendTube</a>
+            <ul class="right hide-on-med-and-down">
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <br>
+      <div class="container" id="jumbo">
+        <div class="jumbotron">
+          <h2>Trending YouTube Videos</h2>
+          <p>TrendTube provides the lastest trending videos in your country</p>
+          <div class="center-align">
+      </div>
+        </div>
+      </div>
+      <br>
+
+      <section>
+        <div class="container">
+          <h3 id="initial">Sign In with your Google account</h3>
+          <div style="padding-left: 40%;">
+          <button class="btn red" id="authorize-button">Sign In</button>
+          </div>
+          <div style="float: right;">
+          <button class="btn red" id="signout-button">Log Out</button>
+          </div>
+          <br>
+          <br>
+          <br>
+          
+          <div id="content">
+            <!--Form to take input country from the user-->
+            <div class="container" style="text-align: center">
+              <form autocomplete="off" id="country-form">
+                <div class="autocomplete" style="width:300px;">
+                  <input id="country-input" type="text" name="myCountry" placeholder="Country">
+                </div>
+                <div class="input-field col">
+                  <select id="sort-options">
+                    <option value="0">All videos</option>
+                    <option value="1">Sort by name</option>
+                    <option value="2">Sort by date</option>
+                    <option value="3">Sort by likes</option>>
+                  </select>
+                  <!--<label>Materialize Select</label>-->
+                </div>
+                <br>
+                <input type="submit" value="Get trending videos" class="btn blue">
+
+              </form>
+            </div>
+            
+            
+            <div class="row">
+              <!--Place where channel data will be displayed-->
+              <div id="channel-data" class="col s6"></div>
+            </div>
+            <!--Place where video will show up-->
+            <div class="row" id="video-container"></div>
+          </div>
+        </div>
+      </section>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
+      <!--Our script file-->
+      <script type="text/javascript" src="countryList.js"></script>
+      <script type="text/javascript" src="search.js"></script>
+      <script src="main.js"></script>
+      <script async defer src="https://apis.google.com/js/api.js" onload="this.onload=function(){};handleClientLoad()" onreadystatechange="if (this.readyState === 'complete') this.onload()">
+      </script>
+    </body>
+  </html>
