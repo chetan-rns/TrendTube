@@ -1,7 +1,7 @@
 # TrendTube
 
 TrendTube is a web application that provides the latest trending youtube videos in a country.
-TrendTube uses youtube v3 API to fetch the video information and handles user authentication using OAuth 2.0. A search box has been provided to get the input country and an API call is made from the frontend for the given country. Users can also sort the videos based on name and published date without making extra API calls. Web Storage has been used to cache the API responses and improve frontend performance.This is my first project that is completly based on frontend,so please excuse me for bad UI:)
+TrendTube uses youtube v3 API to fetch the video information and handles user authentication using OAuth 2.0. A search box has been provided to get the input country and an API call is made from the client machine for the given country. Users can also sort the videos based on name and published date without making extra API calls. Web Storage has been used to cache the API responses and improve frontend performance.
 ## Technology:
 1.HTML, CSS, Javascript, Youtube V3 API.
 
